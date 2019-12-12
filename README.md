@@ -87,7 +87,10 @@ The GHPR dataset identify defect information based on PRs in the Github workflow
 
 ## Requirements
 
+
 ## Quick Start
+
+.csv and .sql
 
 ## References
 Please cite our paper if you use this dataset in your own work:

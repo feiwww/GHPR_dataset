@@ -1,5 +1,6 @@
-# GHPR_dataset
-Introduction
+# Introduction
+
+The GHPR dataset identify defect information based on PRs in the Github workflow, Previous studies identified defective source code parts by git commits or issues on GitHub, but many descriptions of commits (or issues) are not well-formed, which adds noise to defect datasets. We believe that the defect information with team review and the GitHub workflow is more accurate. 
 
 ## data
 

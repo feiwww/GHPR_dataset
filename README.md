@@ -1,96 +1,41 @@
-# Introduction
+# GHPR dataset
 
-The GHPR dataset identify defect information based on PRs in the Github workflow, Previous studies identified defective source code parts by git commits or issues on GitHub, but many descriptions of commits (or issues) are not well-formed, which adds noise to defect datasets. We believe that the defect information with team review and the GitHub workflow is more accurate. 
+The GHPR dataset is used in our empirical studies and evaluation. We identify 3039 bug fixing based on Pull Requests(PRs) in Github, that means, the dataset have 3039 records. If treat the defective and fixed version in each bug fixing as two instances, our GHPR dataset have 3039 defective instance and 3039 non-defective instance. 
 
-## data
-
-<table>
-   <tr>
-      <td>Data Name</td>
-      <td>Type</td>
-      <td>Description</td>
-   </tr>
-   <tr>
-      <td>Project Name</td>
-      <td>Project Information</td>
-      <td>The name of the project</td>
-   </tr>
-   <tr>
-      <td>Project Owner</td>
-      <td></td>
-      <td>The owner of the project</td>
-   </tr>
-   <tr>
-      <td>Language</td>
-      <td></td>
-      <td>The programming of the project</td>
-   </tr>
-   <tr>
-      <td>Git_Address</td>
-      <td></td>
-      <td>The git adderss of the project</td>
-   </tr>
-   <tr>
-      <td>Project Description</td>
-      <td></td>
-      <td>The description of the project provided by the owner</td>
-   </tr>
-   <tr>
-      <td>Project Label</td>
-      <td></td>
-      <td>The label of the project provided by the owner</td>
-   </tr>
-   <tr>
-      <td>PR Title</td>
-      <td>PRs information from remote repository</td>
-      <td>The title of the defect related PR</td>
-   </tr>
-   <tr>
-      <td>PR Description</td>
-      <td></td>
-      <td>The description of the defect related PR</td>
-   </tr>
-   <tr>
-      <td>SHA New</td>
-      <td></td>
-      <td>The ID of the version after the defect being fixed</td>
-   </tr>
-   <tr>
-      <td>SHA Old</td>
-      <td></td>
-      <td>The ID of the version before the defect being fixed</td>
-   </tr>
-   <tr>
-      <td>Path</td>
-      <td></td>
-      <td>The path of the changed files between the version before/after fixed</td>
-   </tr>
-   <tr>
-      <td>Content_New</td>
-      <td>Defect related Code</td>
-      <td>The content of the related files after the defecr being fixed</td>
-   </tr>
-   <tr>
-      <td>Content_Old</td>
-      <td></td>
-      <td>The content of the related files before the defecr being fixed</td>
-   </tr>
-   <tr>
-      <td>Defect Code</td>
-      <td></td>
-      <td>The defect code we recognize from the content of the related files content</td>
-   </tr>
-   <tr>
-      <td></td>
-   </tr>
-</table>
-
-## Requirements
+Previous studies identified defective source code parts by git commits or issues on GitHub, but many descriptions of commits (or issues) are not well-formed, which adds noise to defect datasets. We believe that the defect information with team review and the GitHub workflow is more accurate. 
 
 
 ## Quick Start
 
-.csv and .sql
+Two formats of the GHPR datset are provided:
 
-## References
-Please cite our paper if you use this dataset in your own work:
+1. ghprdata.csv
+2. ghprdata.sql
+
+The CSV file can be imported into Python using numpy or pandas. For more convenient used in database management system(e.g. MySQL), we also provide a SQl file of which the character set is utf-8.
+
+
+## data
+| Label               | Description                                                             |
+|---------------------|-------------------------------------------------------------------------|
+| PROJECT_NAME        | The name of the project                                                 |
+| PROJECT_OWNER       | The owner of the project                                                |
+| PROJECT_DESCRIPTION | The description of the project provided by the owner                    |
+| PROJECT_LABEL       | The label of the project provided by the owner                          |
+| PROJECT_LANGUAGE    | The programming language of the project                                 |
+| SHA_FIXED           | The ID of the version after the defect being fixed                      |
+| SHA_BUG             | The ID of the version before the defect being fixed                     |
+| DIFF_CODE           | The defect-related code we recognize from the content of the fixed file |
+| COMMIT_DESCRIPTION  | The description of the commit in the defect-related PR                  |
+| COMMIT_TIME         | The time of the commit in the defect-related PR                         |
+| OLD_CONTENT         | The content of the defect-related file before defects being fixed       |
+| NEW_CONTENT         | The content of the defect-related file after defects being fixed        |
+| OLD_PATH            | The old path of the changed files                                       |
+| NEW_PATH            | The new path of the changed files                                       |
+| PR_TITLE            | The title of the defect related PR                                      |
+| PR_DESCRIPTION      | The description of the defect related PR                                |
+
+
+
+# References
+Please cite our paper if you use this dataset in your publication:

@@ -1,21 +1,19 @@
-# GHPR dataset
+# GHPR Dataset: A Dataset for Software Defect Prediction
 
-The GHPR dataset is used in our empirical studies and evaluation. We identify 3026 bug fixing based on Pull Requests(PRs) in Github. If treat the defective and fixed version in each bug fixing as two instances, our GHPR dataset have 3026 defective instance and 3026 non-defective instance. 
+The GHPR dataset is used in our empirical studies and evaluation. We identify 3026 bug fixing based on Pull Requests(PRs) in Github. Each bug fixing is treated as a record in the dataset. 
 
-Previous studies identified defective source code parts by git commits or issues on GitHub, but many descriptions of commits (or issues) are not well-formed, which adds noise to defect datasets. We believe that the defect information with team review and the GitHub workflow is more accurate. 
+From the view of supervised learning, we can consider the defective and fixed file version in each record as two learning instances. the GHPR dataset totally have 6052 learning instances which contain 3026 defective instances and 3026 non-defective instances.  
 
-
-## Quick Start
-
-Two formats of the GHPR datset are provided:
+## Data Format
+Two publication formats are provided in *ghprdata.zip*:
 
 1. ghprdata.csv
 2. ghprdata.sql
 
-The CSV file can be imported into Python using numpy or pandas. For more convenient used in database management system(e.g. MySQL), we also provide a SQl file of which the character set is utf-8.
+The CSV file is simple and well-supported in Python using numpy or pandas. Because the databases support large datasets better than CSV files do, we also provide a SQL file of which the character set is utf-8.
 
-
-## data
+## Data Feature
+Each record includes the following 16 features.
 | Label               | Description                                                             |
 |---------------------|-------------------------------------------------------------------------|
 | PROJECT_NAME        | The name of the project                                                 |
@@ -35,7 +33,8 @@ The CSV file can be imported into Python using numpy or pandas. For more conveni
 | PR_TITLE            | The title of the defect related PR                                      |
 | PR_DESCRIPTION      | The description of the defect related PR                                |
 
-
+# baseline
+We calculate 21 static metrics for the total 6052 instances in GHPR dataset, which is the data used for the baseline approaches. All metrics were calculated by the open-source tool *mauricioaniche/ck*. The description of the metrics can be found in the [repository](https://github.com/mauricioaniche/ck).
 
 # References
 Please cite our paper if you use this dataset in your publication:

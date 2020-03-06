@@ -1,6 +1,6 @@
 # GHPR dataset
 
-The GHPR dataset is used in our empirical studies and evaluation. We identify 3039 bug fixing based on Pull Requests(PRs) in Github, that means, the dataset have 3039 records. If treat the defective and fixed version in each bug fixing as two instances, our GHPR dataset have 3039 defective instance and 3039 non-defective instance. 
+The GHPR dataset is used in our empirical studies and evaluation. We identify 3026 bug fixing based on Pull Requests(PRs) in Github. If treat the defective and fixed version in each bug fixing as two instances, our GHPR dataset have 3026 defective instance and 3026 non-defective instance. 
 
 Previous studies identified defective source code parts by git commits or issues on GitHub, but many descriptions of commits (or issues) are not well-formed, which adds noise to defect datasets. We believe that the defect information with team review and the GitHub workflow is more accurate. 
 

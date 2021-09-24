@@ -64,7 +64,7 @@ We calculate 21 static metrics for the total 6052 instances in GHPR dataset, whi
 # References
 Please cite our paper if you use this dataset in your publication:
 @ARTICLE{***, 
-author={Wang Fei and Ai Jun and Xu Jiaxi}, 
-journal={IEEE Transactions on Software Engineering}, 
-title={Software Defect Prediction Based on Graph Representation Learning}, 
-year={2020}, }
+author={Jiaxi Xu;Fei Wang;Jun Ai}, 
+journal={IEEE Transactions on Reliability}, 
+title={Defect Prediction With Semantics and Context Features of Codes Based on Graph Representation Learning}, 
+year={2021}, }
